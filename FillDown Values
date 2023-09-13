@@ -2,6 +2,7 @@ Sub filldown_values()
 
 Dim i As Integer
 Dim max As Integer
+Dim Coluna As String
 
 Application.ScreenUpdating = False 'Freezes the screen
 
@@ -10,7 +11,7 @@ Coluna = Range("YourCell").Value 'Cell to insert the Column letter to fill down 
 
 For i = 2 To max 'Rows Iteration (starts at 2 Jumps the header)
     If Range(Coluna & i).Value = "" Then 'If cell value equal to "" (empty)
-    Range(Coluna & i).Select 'Selects the empty cell
+    Range(Coluna & i).Select 'Select the empty cell
     Selection.FillDown 'Fill down the empty row (Repeats the above cell value)
 
     End If 'Ends the loop
@@ -20,7 +21,7 @@ Next
 Application.ScreenUpdating = True 'Unfreezes the screen
 
 
-Range("a1").Select 'Selects the first cell on the sheet
+Range("a1").Select 'Select the first cell on the sheet
 
 
 End Sub
