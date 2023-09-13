@@ -5,7 +5,7 @@ Dim max As Integer
 
 Application.ScreenUpdating = False 'Freezes the screen updating
 
-max = Range("YourTableName").Rows.Count + 1 'Next row after YourTableName rows
+max = Range("YourTableName").Rows.Count + 1 'Count the rows of YourTableName
 
 Range("A1").Select 'Selects the beginning of the active sheet on dataflow
 
