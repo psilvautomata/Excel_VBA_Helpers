@@ -1,0 +1,26 @@
+Sub filldown_values()
+
+Dim i As Integer
+Dim max As Integer
+
+Application.ScreenUpdating = False 'Freezes the screen
+
+max = Range("YourTable").Rows.Count + 1 'Count YourTable rows
+Coluna = Range("U1").Value 'Cell to insert the Column letter to fill down the values - Better updating a cell value then the code everytime
+
+For i = 2 To max 'Rows Iteration (starts at 2 Jumps the header)
+    If Range(Coluna & i).Value = "" Then 'If cell value equal to "" (empty)
+    Range(Coluna & i).Select 'Selects the empty cell
+    Selection.FillDown 'Fill down the empty row (Repeats the above cell value)
+
+    End If 'Ends the loop
+
+Next
+
+Application.ScreenUpdating = True 'Unfreezes the screen
+
+
+Range("a1").Select 'Seleciona início da coluna
+
+
+End Sub
