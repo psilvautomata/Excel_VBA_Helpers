@@ -1,0 +1,6 @@
+Sub autofit()
+'
+    Rows.Range("(1:1):(500:500)").EntireRow.AutoFit 'Insert your Rows range (X:X):(Y:Y)
+    Columns("A:E").EntireColumn.AutoFit 'Columns 'Insert your Columns (X:Y)
+    
+End Sub
